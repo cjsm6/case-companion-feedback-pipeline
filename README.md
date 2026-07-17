@@ -48,10 +48,15 @@ streamlit run app.py
 ```
 
 Reads `data/processed/master.csv` only — it never re-runs the TF-IDF clustering, just
-groups by the `cluster_id` column `pipeline.py` already computed. Two widgets:
+groups by the `cluster_id` column `pipeline.py` already computed. Six sections:
 
-- **Issue Clusters** — one row per deduplicated issue, ranked by severity then days
-  open, expandable to see every member report.
+- **Overview** — KPI tiles summarizing the corpus at a glance.
+- **This Week's Priorities** — criticals only, ranked customer-size-first then
+  severity.
+- **Who's Unhappy** — sentiment breakdown by role and firm size.
+- **Open Issues by Theme** — severity-stacked chart of issues by theme.
+- **Issue Clusters** — the full deduplicated table, one row per issue, with a
+  per-cluster inspector to see every member report.
 - **Raw Feedback Explorer** — the full labeled table, filterable by channel, role,
   firm size, sentiment, severity, theme, date range, and free-text search.
 
