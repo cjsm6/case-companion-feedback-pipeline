@@ -1,0 +1,8 @@
+﻿data-context/*.pdf
+PROCESS.md
+process_addendum.md
+transcripts/
+__pycache__/
+*.pyc
+.streamlit/
+.venv/
